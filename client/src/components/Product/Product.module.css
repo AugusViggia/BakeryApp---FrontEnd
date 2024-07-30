@@ -1,0 +1,159 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.productContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    background-color: #b69443;
+}
+
+.imageConteiner {
+    height: 45vh;
+    width: 44.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    height: 45vh;
+    width: 45vh;
+    border-radius: 80px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.dataConteiner{
+    height: 100%;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 80px;
+}
+
+.productDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17vw;
+    height: 20vh;
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.secondaryContainer {
+    height: 25vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quantityContainer {
+    display: flex;
+    align-items: center;
+}
+
+.quantityButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 8vh;
+    border: none;
+    border-radius: 20px;
+    margin: 0 1.5vw;
+    font-size: 1.5rem;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.quantityButton:hover {
+    background-color: #dddddd;
+}
+
+.addToCartButton {
+    background-color: #101010;
+    color: #ffffff;
+    height: 9vh;
+    width: 12vw;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.addToCartButton:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #477d4a;
+}
+
+@media screen and (max-width: 760px) {
+    .mainContainer {
+        height: 20vh;
+    }
+
+    .productContainer{
+        width: 98vw;
+        height: 22vh;
+        justify-content: center;
+        border-radius: 35px;
+        margin-bottom: 5vh;
+    }
+
+    .imageConteiner {
+        height: 20vh;
+        width: 22vh;
+        border-radius: 35px;
+    }
+
+    .image {
+        height: 20vh;
+        width: 20vh;
+        border-radius: 35px;
+    }
+
+    .dataConteiner{
+        height: 100%;
+        width: 50vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 35px;
+    }
+
+    .productDescription {
+        width: 50vw;
+        height: 10vh;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .quantityContainer {
+        display: none;
+    }
+
+    .addToCartButton {
+        height: 7vh;
+        width: 30vw;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.2s ease-in-out;
+        text-decoration: none;
+    }
+}

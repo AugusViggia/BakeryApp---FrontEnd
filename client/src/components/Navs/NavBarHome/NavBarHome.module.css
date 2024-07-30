@@ -1,0 +1,72 @@
+.navbar {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.cartBox {
+    width: 40vw;
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 1.5vw;
+}
+
+.cart {
+    border: 3px solid #d9b767;
+    height: 10vh;
+    width: 10vh;
+    margin-top: 4vh;
+    margin-bottom: 20vh;
+    border-radius: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    color: #f5f5f5;
+}
+
+.cart:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.btn {
+    color: #d9b767;
+    font-weight:bold;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right:2.5vw ;
+    margin-bottom: 5vh;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    transition: 0.5s;
+    transform: translateX(-25px);
+}
+
+.navLink{
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: .5s;
+}
+
+@media screen and (max-width: 860px) {
+
+    .btn {
+        font-size: 2rem; 
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .navbar {
+        display: none;
+    }
+}

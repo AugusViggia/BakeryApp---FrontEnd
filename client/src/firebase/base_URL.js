@@ -1,0 +1,1 @@
+export const base_URL = "https://chiniapp-895b8-default-rtdb.firebaseio.com";

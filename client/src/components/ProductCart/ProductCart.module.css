@@ -1,0 +1,85 @@
+.main {
+    height: 16vh;
+    width: 14vw;
+    margin-bottom: 2vh;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    background-color: #101010;
+    padding: 0.2rem;
+}
+
+.imgConteiner {
+    height: auto;
+    width: auto;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    object-position: center;
+    object-fit: cover;
+    border-radius: 45px;
+    height: 12vh;
+    width: 8vw;
+}
+
+.description {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity {
+    color: aliceblue;
+    margin: 0.5vw;
+}
+
+.buttonsConteiner{
+    height: 30%;
+    width: 90%;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quantityButton {
+    border: none;
+    height: 3vh;
+    width: 1.5vw;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.quantityButton:hover{
+    cursor: pointer;
+}
+
+.deleteButton{
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    background-color: transparent;
+}
+
+.trash{
+    height: 3vh;
+    color: white;
+}
+
+.trash:hover{
+    color: red;
+    cursor: pointer;
+}
