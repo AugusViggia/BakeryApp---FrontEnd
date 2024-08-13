@@ -1,10 +1,13 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { setUser, setIdToken, setUserName } from "../redux/slice/authSlice";
+import { setUser, setIdToken, setUserName , clearUser} from "../redux/slice/authSlice";
 import { validations } from "../validations/validations";
 import { firebase_auth } from "../firebase/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut
+} from "firebase/auth";
 
 export const useUserHandlers = (
     setEmailError,
@@ -17,7 +20,7 @@ export const useUserHandlers = (
 
     const { isEmailValid, isPasswordValid, isUsernameValid } = validations();
 
-    const handleLogIn = async (email, password) => {
+    const handleLogIn = async (email, password, setError) => {
         try {
             const response = await signInWithEmailAndPassword(
                 firebase_auth,
@@ -28,10 +31,29 @@ export const useUserHandlers = (
             console.log(response);
 
             dispatch(setUser(response.user.email));
+            dispatch(setIdToken(response._tokenResponse.idToken));
             localStorage.setItem("userEmail", email);
             navigate("/");
         } catch (error) {
-            console.log("Error al iniciar sesion: ", error);
+            console.log("Error al iniciar sesión: ", error);
+            console.log(error.code);
+            
+            switch (error.code) {
+                case "auth/wrong-password":
+                    setError("Incorrect password. Please try again.");
+                    break;
+                case "auth/user-not-found":
+                    setError(
+                        "No user found with this email. Please check the email or register."
+                    );
+                    break;
+                case "auth/invalid-email":
+                    setError("Invalid email format. Please check the email.");
+                    break;
+                default:
+                    setError("An error occurred. Maybe the password or email is incorrect.");
+                    break;
+            }
         }
     };
 
@@ -67,28 +89,41 @@ export const useUserHandlers = (
             setPasswordError("Las contraseñas no coinciden");
             return;
         }
-
         try {
             const response = await createUserWithEmailAndPassword(
                 firebase_auth,
                 email,
                 password
             );
-            console.log(response);
-
             dispatch(setUser(response.user.email));
             dispatch(setUserName(username));
             dispatch(setIdToken(response._tokenResponse.idToken));
-
             localStorage.setItem("userEmail", email);
+            navigate("/");
+        } catch (error) {
+            console.log("Error al registrar: ", error);
+            if (error.code === "auth/email-already-in-use") {
+                setRegistrationError("This email is already in use.");
+            } else {
+                setRegistrationError("An error occurred. Please try again.");
+            }
+        }
+    };
+
+    const handleLogOut = async () => {
+        try {
+            await signOut(firebase_auth);
+            dispatch(clearUser());
+            localStorage.removeItem("userEmail");
             navigate("/login");
         } catch (error) {
-            console.log("Error durante el registro Firebase:", error);
+            console.log("Error al cerrar sesión: ", error);
         }
     };
 
     return {
         handleLogIn,
         handleRegister,
+        handleLogOut
     };
 };

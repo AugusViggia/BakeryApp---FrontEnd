@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Home.module.css";
 import NavBarHome from "../../components/Navs/NavBarHome/NavBarHome";
 import NavMovile from "../../components/Navs/NavMovile/NavMovile";
-import ProductsHome from "../../components/ProductsHome/ProductsHome";
+// import ProductsHome from "../../components/ProductsHome/ProductsHome";
 
 function Home() {
   return (
@@ -15,7 +15,7 @@ function Home() {
           <h2>[baked goods & cookies]</h2>
         </div> 
       </div>
-      <ProductsHome/>
+      {/* <ProductsHome/> */}
     </div>
   );
 }

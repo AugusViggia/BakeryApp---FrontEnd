@@ -21,8 +21,10 @@ const authSlice = createSlice({
             state.idToken = action.payload;
         },
 
-        clearUser: (state, action) => {
-            (state.user = null)((state.idToken = null));
+        clearUser: (state) => {
+            state.user = null;
+            state.idToken = null;
+            state.userName = null;
         },
     },
 });

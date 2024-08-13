@@ -72,12 +72,16 @@ const Register = () => {
               className={styles.input}
             />
           </div>
-          <button type="submit" className={styles.button}>Registrarse</button>
+          <button type="submit" className={styles.button}>
+            Registrarse
+          </button>
           <Link to="/login" className={styles.link}>
             ¿Ya tienes una cuenta? Inicia sesión
           </Link>
         </form>
-        {registrationError && <p>{registrationError}</p>}
+        {registrationError && (
+          <p className={styles.error}>{registrationError}</p>
+        )}
       </div>
     );
 };

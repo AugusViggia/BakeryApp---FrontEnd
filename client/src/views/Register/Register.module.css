@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 5rem;
+    width: 100%;
+    gap: 3rem;
     color: white;
 }
 
@@ -15,21 +16,34 @@
 .form{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     font-size: 1.5rem;
+    width: auto;
+    padding: 0.5rem;
 }
 
 .field{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
-    width: 30vw;
+    gap: 1.2rem;
+    width: 40vw;
 }
 
 .input{
     width: 50%;
     padding: 0.5rem;
+}
+
+.button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 10vw;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 3rem;
 }
 
 .button:hover{
@@ -39,9 +53,15 @@
 
 .link{
     color: white;
+    text-align: center;
     text-decoration: none;
 }
 
 .link:hover{
-    color: blue;
+    color: gray;
+}
+
+.error {
+    color: red;
+    font-size: 1.6rem;
 }

@@ -11,11 +11,6 @@ const ProductsHome = () => {
           <img src="/Chocotorta.jpg" alt="imagen" className={style.productImg1} />
           <div className={style.productDetail1}>
             <span className={style.nombre}>Personalizados</span>
-  
-            
-            <div className={style.buttonCont}>
-              <button>+</button>{1}<button>-</button>
-            </div>
           </div>
           
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import NavBarHome from "../../components/Navs/NavBarHome/NavBarHome";
 import NavMovile from "../../components/Navs/NavMovile/NavMovile";
+import { useUserHandlers } from "../../handlers/userHandlers";
 import styles from "./Profile.module.css";
 
 const Profile = () => {
@@ -9,6 +10,8 @@ const Profile = () => {
   const userName = useSelector((state) => state.authSlice.userName);
 
   console.log(user, userName);
+
+  const { handleLogOut } = useUserHandlers();
 
   return (
     <div className="{style.container}">
@@ -30,6 +33,9 @@ const Profile = () => {
             <strong>Location:</strong>
           </div>
         </div>
+        <button onClick={handleLogOut} className={styles.logoutButton}>
+          Log Out
+        </button>
       </div>
     </div>
   );
