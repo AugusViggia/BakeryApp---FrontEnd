@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useUserHandlers } from "../../handlers/userHandlers";
 import NavBarHome from "../../components/Navs/NavBarHome/NavBarHome";
-import NavMovile from "../../components/Navs/NavMovile/NavMovile";
 import styles from "./LogIn.module.css";
 
 const LogIn = () => {
@@ -20,9 +19,8 @@ const LogIn = () => {
     
     return (
       <div className={styles.logInContainer}>
-        <NavMovile />
         <NavBarHome />
-        <div>
+        <div className={styles.titleDiv}>
           <h3>Log In</h3>
         </div>
         <div className={styles.inputContainer}>

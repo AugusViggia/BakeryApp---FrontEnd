@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useUserHandlers } from "../../handlers/userHandlers";
+import NavBarHome from "../../components/Navs/NavBarHome/NavBarHome";
 import styles from "./Register.module.css";
 
 const Register = () => {
@@ -27,6 +28,7 @@ const Register = () => {
     
     return (
       <div className={styles.container}>
+        <NavBarHome />
         <h2 className={styles.title}>Registrate</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
