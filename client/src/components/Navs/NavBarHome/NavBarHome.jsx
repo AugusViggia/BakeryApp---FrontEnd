@@ -1,11 +1,6 @@
 //Dependencias de REACT
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-//Dependencias de fontAwesome (icono para el carrito de compras)
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-//Importacion de componente Cart
-import Cart from "../../../views/Cart/Cart";
 //Importacion de estilos
 import style from "./NavBarHome.module.css";
 //Dependencias de GSAP
