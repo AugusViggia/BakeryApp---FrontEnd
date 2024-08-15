@@ -49,9 +49,10 @@ function Cart({ isCartOpen, setIsCartOpen }) {
       <div className={style.buttonConteiner}>
         <button
           onClick={() => setIsCartOpen(false)}
+          onTouchStart={() => setIsCartOpen(false)}
           className={style.closeCart}
         >
-          -
+          x
         </button>
       </div>
 

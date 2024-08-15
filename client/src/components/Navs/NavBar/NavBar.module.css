@@ -1,30 +1,94 @@
 .navbar {
+    position: fixed;
+    width: 100%;
     height: 20vh;
-    width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    z-index: 99;
+    margin: 0;
+}
+
+.navOpen {
+    display: none;
+}
+
+.nav {
+    height: 15vh;
+    width: 100vw;
+}
+
+.contenido {
+    display: none;
+}
+
+.contenidoOpen {
+    height: 40vh;
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     position: fixed;
     top: 0;
-    z-index: 99;
+    right: 0;
+    /* Cambia left a right para moverlo al lado derecho */
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.buttonCont {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cerrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 25px;
+    width: 3vw;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.734);
+}
+
+.cerrar:hover {
+    transition: 0.5s;
+    transform: translateX(-25px);
+}
+
+.linksCont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.navLink {
+    text-decoration: none;
 }
 
 .cartBox {
-    width: 10vw;
+    width: 100vw;
     height: 15vh;
-    display:flex;
-    justify-content: center;
+    display: flex;
     align-items: center;
 }
 
 .cart {
     border: 3px solid #d9b767;
-    height: 10vh;
-    width: 10vh;
+    height: 8vh;
+    width: 8vh;
     border-radius: 50px;
+    font-size: 1.6rem;
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-left: auto;
     transition: 0.5s;
     box-shadow: 4px 4px 10px black;
     color: #f5f5f5;
@@ -32,7 +96,22 @@
 
 .cart:hover {
     transition: 0.5s;
-    transform: scale(1.1);
+    transform: translateX(-25px);
+}
+
+.btnMenu{
+    color: #d9b767;
+    font-weight: bold;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btnMenu:hover {
+    transition: 0.5s;
+    transform: translateX(-25px);
 }
 
 .btn {
@@ -57,7 +136,115 @@
 
 @media screen and (max-width: 760px) {
     .navbar {
+        position: fixed;
+        width: 100%;
+        height: 18vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 99;
+        margin: 0;
+    }
+
+    .navOpen {
         display: none;
+    }
+
+    .nav {
+        height: 8vh;
+        width:fit-content;
+    }
+
+    .contenido {
+        display: none;
+    }
+
+    .contenidoOpen {
+        height: 32vh;
+        width: 53vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .buttonCont {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .cerrar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 25px;
+        width: 6vw;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.734);
+    }
+
+    .linksCont {
+        height: 27vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navLink {
+        text-decoration: none;
+    }
+
+    .btn {
+        color: #d9b767;
+        font-weight: bold;
+        font-size: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        transition: 0.5s;
+    }
+
+    .btnMenu {
+        color: #d9b767;
+        font-weight: bold;
+        font-size: 3rem;
+        display: flex;
+        justify-content: flex-end;
+        transition: 0.5s;
+    }
+
+    .navLink {
+        color: #f5f5f5;
+        text-decoration: none;
+        transition: .5s;
+    }
+
+    .cartBox {
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .cart {
+        border: 3px solid #d9b767;
+        height: 8vh;
+        width: 8vh;
+        border-radius: 50px;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        transition: 0.5s;
+        box-shadow: 4px 4px 10px black;
+        color: #f5f5f5;
     }
 }
 

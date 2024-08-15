@@ -21,9 +21,10 @@ const Products = () => {
 
   return (
     <div className={style.mainContainer}>
-      <NavMovile />
       <NavBar />
-      <Filtros setFiltroActivo={setFiltroActivo} />
+      <div className={style.filters}>
+        <Filtros setFiltroActivo={setFiltroActivo} />
+      </div>
 
       <div className={style.productList}>
         {productosFiltrados &&

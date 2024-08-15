@@ -8,6 +8,7 @@ import Loading from "./components/Loading/Loading";
 import LogIn from "./views/LogIn/LogIn"
 import Register from './views/Register/Register';
 import Profile from "./views/Profile/Profile";
+import Nosotros from "./views/Nosotros/Nosotros";
 //Estilos
 import "./App.css";
 
@@ -46,6 +47,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/nosotros" element={<Nosotros />} />
       </Routes>
     </div>
   );

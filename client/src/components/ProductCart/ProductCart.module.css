@@ -1,85 +1,90 @@
-.main {
-    height: 16vh;
-    width: 14vw;
-    margin-bottom: 2vh;
-    border-radius: 45px;
-    display: flex;
-    align-items: center;
-    background-color: #101010;
-    padding: 0.2rem;
-}
+@media screen and (max-width: 760px) {
+    .main {
+        height: 16vh;
+        width: 49vw;
+        border-radius: 2rem;
+        margin-bottom: 2vh;
+        display: flex;
+        align-items: center;
+        background-color: #101010;
+        padding: 0.2rem;
+    }
 
-.imgConteiner {
-    height: auto;
-    width: auto;
-    border-radius: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .imgConteiner {
+        height: 13vh;
+        width: 30vw;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.imagen {
-    object-position: center;
-    object-fit: cover;
-    border-radius: 45px;
-    height: 12vh;
-    width: 8vw;
-}
+    .imagen {
+        object-position: center;
+        object-fit: cover;
+        border-radius: 1rem;
+        height: 12vh;
+        width: 25vw;
+    }
 
-.description {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .description {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.quantity {
-    color: aliceblue;
-    margin: 0.5vw;
-}
+    .quantity {
+        color: aliceblue;
+        margin: 0.5vw;
+    }
 
-.buttonsConteiner{
-    height: 30%;
-    width: 90%;
-    padding: 0.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+    .buttonsConteiner {
+        height: 6vh;
+        min-width: 18vw;
+        gap: 0.5rem;
+        padding: 0.2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-.quantityButton {
-    border: none;
-    height: 3vh;
-    width: 1.5vw;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-}
+    .quantityButton {
+        border: none;
+        height: 3vh;
+        width: 8vw;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
 
-.quantityButton:hover{
-    cursor: pointer;
-}
+    .quantityButton:hover {
+        cursor: pointer;
+    }
 
-.deleteButton{
-    border: none;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    background-color: transparent;
-}
+    .deleteButton {
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        background-color: transparent;
+    }
 
-.trash{
-    height: 3vh;
-    color: white;
-}
+    .trash {
+        height: 3vh;
+        width: 8vw;
+        font-size: 1.3rem;
+        color: white;
+    }
 
-.trash:hover{
-    color: red;
-    cursor: pointer;
+    .trash:hover {
+        color: red;
+        cursor: pointer;
+    }
 }

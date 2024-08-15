@@ -4,7 +4,6 @@
     align-items: center;    
     width: 100%;
     min-height: 100vh;
-    padding-top: 20vh;
 }
 
 .productList {
@@ -14,11 +13,17 @@
     justify-content: space-between;
 }
 
+.filters{
+    margin-top: 20vh;
+    width: 95%;
+    height: auto;
+}
+
 @media screen and (max-width: 760px) {
     .mainContainer {
         padding-top: 0; 
         min-height: 0;
-        height: 100%;   
+        min-height: 100vh; 
     }
 
     .productList {
@@ -30,5 +35,9 @@
         justify-content: center;
         display: flex;
         flex-direction: column;
+    }
+
+    .filters{
+        margin-top: 13rem;
     }
 }
