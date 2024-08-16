@@ -5,8 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 99;
+    z-index: 99;;
     margin: 0;
+    padding-right: 1rem;
+    border: 3px solid red;
 }
 
 .navOpen {
@@ -31,7 +33,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    /* Cambia left a right para moverlo al lado derecho */
     background-color: rgba(0, 0, 0, 0.85);
 }
 
