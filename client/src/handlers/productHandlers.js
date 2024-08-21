@@ -4,7 +4,7 @@ import { addToCart, updateQuantity, removeFromCart } from "../redux/slice/homeSl
 
 export const useProductHandlers = (setModalEmptyOpen) => {
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
+  const [setQuantity] = useState(1);
   const cartList = useSelector((state) => state.homeSlice.cartList);
   
   const handleAddToCart = (product, quantity) => {
@@ -18,13 +18,6 @@ export const useProductHandlers = (setModalEmptyOpen) => {
         ...cartList[existingProductIndex],
         quantity: cartList[existingProductIndex].quantity + quantity,
       };
-
-      // Crear una copia del carrito y actualizar el producto existente
-      const updatedCartList = [
-        ...cartList.slice(0, existingProductIndex),
-        updatedProduct,
-        ...cartList.slice(existingProductIndex + 1),
-      ];
 
       // Dispatch de la acción con el carrito actualizado
       dispatch(

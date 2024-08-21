@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const ProductCart = ({ product }) => {
-  const dispatch = useDispatch();
   const cart = useSelector((state) => state.homeSlice.cartList);
   const [isModalEmptyOpen, setModalEmptyOpen] = useState(false);
 
