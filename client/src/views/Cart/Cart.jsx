@@ -31,7 +31,7 @@ function Cart({ isCartOpen, setIsCartOpen }) {
     localStorage.setItem("cart", JSON.stringify(cartList));
 
     const totalSum = cartList.reduce(
-      (sum, product) => sum + product.price * product.quantity,
+      (sum, product) => sum + product.price * product.quantity, // Recalcula el total
       0
     );
     setTotalPrice(totalSum);

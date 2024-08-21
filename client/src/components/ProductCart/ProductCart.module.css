@@ -11,7 +11,7 @@
 
 .imgConteiner {
     height: 12vh;
-    max-width: 10vw;
+    width: fit-content;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@
     object-fit: cover;
     border-radius: 1rem;
     height: 12vh;
-    max-width: 10vw;
+    width: 6vw;
 }
 
 .description {

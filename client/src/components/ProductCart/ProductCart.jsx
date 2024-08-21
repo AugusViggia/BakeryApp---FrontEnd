@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useProductHandlers } from "../../handlers/productHandlers";
 import DeleteProductModal from '../Modals/DeleteProductModal';
 import style from "./ProductCart.module.css";
@@ -6,15 +7,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const ProductCart = ({ product }) => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.homeSlice.cartList);
   const [isModalEmptyOpen, setModalEmptyOpen] = useState(false);
-  const [quantity, setQuantity] = useState(product.quantity);
+
+  const currentProduct = cart.find((item) => item.id === product.id);
+  const quantity = currentProduct ? currentProduct.quantity : 0;
 
   const {
-    handleIncrementDetail,
-    handleDecrementDetail,
+    handleIncrementCart,
+    handleDecrementCart,
     handleModalCancel,
-    handleDelete
+    handleDelete,
   } = useProductHandlers(setModalEmptyOpen);
+
+    const handleIncrement = () => {
+      const newQuantity = quantity + 1;
+      handleIncrementCart(product, newQuantity);
+    };
+
+    const handleDecrement = () => {
+      if (quantity > 1) {
+        const newQuantity = quantity - 1;
+        handleDecrementCart(product, newQuantity);
+      } else {
+        setModalEmptyOpen(true);
+      }
+    };
 
 
   return (
@@ -33,12 +52,7 @@ const ProductCart = ({ product }) => {
         <div className={style.buttonsConteiner}>
           {product.quantity > 1 ? (
             <button
-              onClick={() => {
-                if (quantity > 1) {
-                  handleDecrementDetail(product, quantity);
-                  setQuantity((prevQuantity) => prevQuantity - 1);
-                }
-              }}
+              onClick={handleDecrement}
               className={style.quantityButton}
             >
               {" "}
@@ -60,10 +74,7 @@ const ProductCart = ({ product }) => {
           />
 
           <button
-            onClick={() => {
-              handleIncrementDetail(product, quantity);
-              setQuantity((prevQuantity) => prevQuantity + 1);
-            }}
+            onClick={handleIncrement}
             className={style.quantityButton}
           >
             {" "}
