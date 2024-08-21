@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useProductHandlers } from "../../handlers/productHandlers";
 import DeleteProductModal from '../Modals/DeleteProductModal';
 import style from "./ProductCart.module.css";
