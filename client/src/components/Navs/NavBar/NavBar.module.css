@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
     z-index: 99;
     margin: 0;
 }
@@ -33,7 +33,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    /* Cambia left a right para moverlo al lado derecho */
     background-color: rgba(0, 0, 0, 0.85);
 }
 

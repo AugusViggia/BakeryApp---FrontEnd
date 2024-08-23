@@ -100,17 +100,14 @@
     background-color: #477d4a;
 }
 
-@media screen and (max-width: 760px) {
-    .mainContainer {
-        height: 20vh;
-    }
-
+@media screen and (max-width: 1170px) {
     .productContainer{
         width: 98vw;
-        height: 22vh;
+        height: 23vh;
         justify-content: center;
         border-radius: 35px;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
+        border: 3px solid red;
     }
 
     .imageConteiner {
@@ -133,6 +130,7 @@
         flex-direction: column;
         justify-content: space-between;
         border-radius: 35px;
+        border: 3px solid yellow;
     }
 
     .productDescription {
@@ -140,18 +138,22 @@
         height: 10vh;
         font-size: 1rem;
         text-align: center;
+        border: 3px solid green;
     }
 
     .secondaryContainer{
         display: flex;
         flex-direction: column;
         z-index: 0;
+        width: 50vw;
+        border: 3px solid blue;
     }
 
     .quantityContainer {
         display: flex;
         align-items: center;
         gap: 1.2rem;
+        border: 3px solid orange;
     }
 
     .quantityButton {
@@ -162,10 +164,10 @@
         width: 4vh;
         border: none;
         border-radius: 20px;
-        margin: 0 1.5vw;
         font-size: 1.5rem;
         background-color: #eeeeee;
         cursor: pointer;
+        border: 3px solid pink;
     }
 
     .quantityButton:hover {
@@ -181,5 +183,6 @@
         font-size: 0.7rem;
         transition: 0.2s ease-in-out;
         text-decoration: none;
+        border: 3px solid black;
     }
 }
