@@ -19,7 +19,7 @@
     height: auto;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1170px) {
     .mainContainer {
         padding-top: 0; 
         min-height: 0;
