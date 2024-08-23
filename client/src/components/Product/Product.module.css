@@ -123,7 +123,7 @@
     }
 
     .dataConteiner{
-        height: 100%;
+        height: auto;
         width: 50vh;
         display: flex;
         align-items: center;
@@ -146,6 +146,7 @@
         flex-direction: column;
         z-index: 0;
         width: 50vw;
+        max-height: 8vh;
         border: 3px solid blue;
     }
 
