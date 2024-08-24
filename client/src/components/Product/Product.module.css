@@ -130,6 +130,7 @@
         flex-direction: column;
         justify-content: space-between;
         border-radius: 35px;
+        gap: 0.3rem;
         border: 3px solid yellow;
     }
 
@@ -147,6 +148,7 @@
         z-index: 0;
         width: 50vw;
         max-height: 10vh;
+        gap: 0.8rem;
         border: 3px solid blue;
     }
 
