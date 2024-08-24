@@ -107,7 +107,6 @@
         justify-content: center;
         border-radius: 35px;
         margin-bottom: 1vh;
-        border: 3px solid red;
     }
 
     .imageConteiner {
@@ -131,7 +130,6 @@
         justify-content: space-between;
         border-radius: 35px;
         gap: 0.3rem;
-        border: 3px solid yellow;
     }
 
     .productDescription {
@@ -139,7 +137,6 @@
         max-height: 10vh;
         font-size: 1rem;
         text-align: center;
-        border: 3px solid green;
     }
 
     .secondaryContainer{
@@ -149,14 +146,12 @@
         width: 50vw;
         max-height: 10vh;
         gap: 0.8rem;
-        border: 3px solid blue;
     }
 
     .quantityContainer {
         display: flex;
         align-items: center;
         gap: 1.2rem;
-        border: 3px solid orange;
     }
 
     .quantityButton {
@@ -170,7 +165,6 @@
         font-size: 1.5rem;
         background-color: #eeeeee;
         cursor: pointer;
-        border: 3px solid pink;
     }
 
     .quantityButton:hover {
@@ -186,6 +180,5 @@
         font-size: 0.7rem;
         transition: 0.2s ease-in-out;
         text-decoration: none;
-        border: 3px solid black;
     }
 }
