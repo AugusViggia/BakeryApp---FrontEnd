@@ -15,8 +15,8 @@ export const useCartHandlers = (
 ) => {
 
   //URL de la API en produccion y local
-  const apiURL = "https://bakeryapp-backend-production.up.railway.app/";
-  /*const apiURL = "http://localhost:3000";*/
+  // const apiURL = "https://bakeryapp-backend-production.up.railway.app/";
+  const apiURL = "http://localhost:3000";
 
 
   //Se declara la constante "dispatch" la cual ejecuta el Hook de React "useDispatch()" 

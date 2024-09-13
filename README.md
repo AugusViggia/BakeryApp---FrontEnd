@@ -1,24 +1,27 @@
-# Mi Proyecto Increíble
+BakeryApp es una plantilla de eCommerce diseñada para ser flexible y reutilizable, permitiendo crear tiendas online de manera rápida y eficiente. Este proyecto ha sido desarrollado para ofrecer una solución escalable que se puede adaptar a cualquier tipo de negocio, con integración completa de pagos y funcionalidades clave para gestionar productos y usuarios.
 
-Bienvenido a mi proyecto increíble. En este proyecto, hago cosas asombrosas y revolucionarias.
+Tecnologías utilizadas
 
-## Que falta:
+Frontend:
+⚛️ React
+🖼️ FontAwesome
+🎨 GSAP
+🗂️ Redux
+🌐 Axios
 
-- [o] botones de + y - a los productos y no solo agregar al carrito para sumar stock.
-- [o] ubicar boton de carrito en la vista de productos en vez del boton ver carrito en el producto.
-- [x] disenio de los productos.
-- [o] que en el carrito de compras no se rendericen productos repetidos.
-- [x] definir el idioma de la app.
-- [o] disenio de nav con go back y otros botones.
-- [x] dashboard.
-- [x] terminar el login.
-- [x] flujo de compra terminado con usario reaal.
+Backend:
+🛠️ Node.js
+🚀 Express.js
+💳 MercadoPago API
+✉️ Nodemailer
 
+Otros servicios:
+☁️ Firebase (Autenticación y almacenamiento)
+🌐 Railway (Despliegue)
 
-## Instalación
-
-Para instalar este proyecto, simplemente clona el repositorio:
-
-```bash
-git clone https://github.com/AugusViggia/chiniApp---Front.git
-
+Funcionalidades principales
+🛒 Carrito de compras interactivo: Actualización en tiempo real de productos y precios.
+💳 Pagos seguros: Integración con MercadoPago para transacciones seguras.
+📦 Gestión de productos: Agregar, eliminar y ajustar cantidades de productos fácilmente.
+✉️ Notificaciones automáticas por correo: Envía emails al cliente tras realizar una compra.
+🌐 Responsive design: Adaptable a cualquier dispositivo, proporcionando una experiencia de usuario fluida.
