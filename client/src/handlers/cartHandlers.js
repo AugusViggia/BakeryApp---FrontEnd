@@ -15,7 +15,7 @@ export const useCartHandlers = (
 ) => {
 
   //URL de la API en produccion y local
-  const apiURL = "https://bakeryapp-backend-production.up.railway.app/";
+  const apiURL = "https://bakeryapp-backend-production.up.railway.app";
   // este url es para que sea a nivel local
   // const apiURL = "http://localhost:3000";
 
