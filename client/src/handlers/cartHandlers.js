@@ -5,7 +5,7 @@ import { validations } from "../validations/validations";
 
 export const useCartHandlers = (
 
-  //Recibe 5 parametros 
+  //Recibe 5 parametros
   setInstagramUsername,
   setTouched,
   setError,
@@ -15,11 +15,12 @@ export const useCartHandlers = (
 ) => {
 
   //URL de la API en produccion y local
-  // const apiURL = "https://bakeryapp-backend-production.up.railway.app/";
-  const apiURL = "http://localhost:3000";
+  const apiURL = "https://bakeryapp-backend-production.up.railway.app/";
+  // este url es para que sea a nivel local
+  // const apiURL = "http://localhost:3000";
 
 
-  //Se declara la constante "dispatch" la cual ejecuta el Hook de React "useDispatch()" 
+  //Se declara la constante "dispatch" la cual ejecuta el Hook de React "useDispatch()"
   const dispatch = useDispatch();
   //Trae la funcion "isValidInstagramUsername" del componente "validations"
   const { isValidInstagramUsername } = validations();
@@ -49,7 +50,7 @@ export const useCartHandlers = (
       const initPoint = response.data.init_point;
       console.log("esta es la response.data", response.data);
       window.location.href = initPoint;
-      
+
     } catch (error) {
 
       //Se manejan eventuales errores
@@ -69,7 +70,7 @@ export const useCartHandlers = (
 
     //Guarda en un estado local el @usuario de instagram
     setInstagramUsername(inputValue);
-  
+
     setTouched(true);
 
     //Guarda el @usuario de instagram en una constante la cual indica que es valido
